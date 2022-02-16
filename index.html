@@ -5,6 +5,68 @@
     <title>PSU Javascript Lab</title>
 </head>
 <body>
+    <script type="text/javascript">
 
+        const EVENT_NAME = "Olympics 2022"
+        const YEARS_OLD = 30
+
+        // Browser log
+        console.log("Browser is " + navigator.vendor)
+        // document.write("String from Javascript - Do not use") --> Dont use this use console log
+
+        console.log("Event: " + EVENT_NAME)
+
+        let athleteName = "Shaun White"
+        let athleteHeight = "5'9\""
+        console.log(athleteName + " is " + athleteHeight + ".")
+
+        athleteName = "Mikaela Shiffrin"
+        athleteHeight = "5'7\""
+        console.log(athleteName + " is " + athleteHeight + ".")
+
+        let OlympicEvents = ["Curling", "Figure Skating", "Snowboarding"]
+        console.log(OlympicEvents)
+        console.log("The first event is " + OlympicEvents[0])
+
+        let competingAthlete1 ={
+            "name": "Shaun White",
+            "birthYear": 1986,
+            "event": "Halfpipe"
+        }
+
+        let competingAthlete2 ={
+            "name": "Mikaela Shiffrin",
+            "birthYear": 1995,
+            "event": ["Super-G", "Giant Slalom", "Downhill"]
+        }
+
+        let competingAthletes = [competingAthlete1, competingAthlete2]
+        console.log(competingAthletes)
+
+        function getAge(birthYear){
+            return 2022 - birthYear
+        }
+
+        console.log(competingAthlete1.name +" is " + getAge(competingAthlete1.birthYear) + " years old.")
+
+        function isOlderThanXYears(birthYear){
+
+            let yearsOld = 2022 - birthYear
+
+            if(yearsOld > YEARS_OLD){
+                console.log("Athlete is greater than " + YEARS_OLD + " years old")
+            }
+            else if(yearsOld === YEARS_OLD){
+                console.log("Athlete is " + YEARS_OLD + " years old")
+            }
+            else{
+                console.log("Athlete is less than " + YEARS_OLD + " years old")
+            }
+        }
+
+        isOlderThanXYears(competingAthlete1.birthYear)
+        isOlderThanXYears(competingAthlete2.birthYear)
+
+    </script>
 </body>
 </html>
